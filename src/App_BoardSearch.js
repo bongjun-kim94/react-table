@@ -6,6 +6,7 @@ class BoardSearch extends Component {
         let nextState = {};
         nextState[e.target.name] = e.target.value;
         this.setState(nextState);
+        console.log('2341234')
     }
 
     // constructor(props) {
@@ -18,6 +19,15 @@ class BoardSearch extends Component {
     //     this.stateRefresh = this.stateRefresh.bind(this);
     //     this.handleValueChange = this.handleValueChange.bind(this)
     // }
+
+    const filterComponents = (data) => {
+        data = data.filter((c) => {
+            return c.name.indexOf(this.state.searchKeyword) > -1;
+        });
+        return data.map((c) => {
+            return
+        });
+    }
 
     render() {
         return (
